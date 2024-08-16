@@ -17,11 +17,11 @@
     </head>
     <body id="body">
         <h1>Olá, Mundo!</h1>
+        </br>
         <p>Bem-vindo ao seu primeiro projeto web!</p>
-        <br>
+        </br>
         <h2>titulos:</h2>
-        <br>
-        <p id="data_out"></p>
+        </br>
     </body>
 
     <script type="module">
@@ -32,10 +32,10 @@
         const p = document.createElement('div');
 
         data.forEach(x => {
-            var txt = document.createTextNode(""+x.title+"");
+            var txt = document.createTextNode(""+x.title+"\u000a");
             p.appendChild(txt);
         });
-
+        p.style = "white-space: pre;"
         var body = document.getElementById('body');
         body.appendChild(p);
     </script>
