@@ -1,7 +1,7 @@
 /* *vars */
 :root {
     --font-body: 'Roboto', sans-serif;
-    --font-title: 'Montserrat', sans-serif;
+    --font-title: "Fredoka", sans-serif;
     --font-size-base: 16px;
     --fs-sm: clamp (0.8rem, 0.17vi + 0.76rem, 0.89rem);
     --fs-base: clamp (1rem, 0.34vi + 0.91rem, 1.19rem);
@@ -30,6 +30,10 @@ header
     padding: 2rem 0;
     background-color: #4CAF50;
     color: white;
+}
+main
+{
+    padding: 0 5rem;
 }
 h1 {
     font-family: var(--font-title);
