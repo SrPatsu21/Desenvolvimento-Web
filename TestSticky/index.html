@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <script type="module">
+            import { ola_mundo} from "./js/main.js";
+            console.log(ola_mundo);
+        </script>
+
+        <title>Document</title>
+    </head>
+    <body id="body">
+        <h1>Olá, Mundo!</h1>
+        </br>
+        <p style="margin-bottom: 200vh;">Bem-vindo ao seu primeiro projeto web!</p>
+        </br>
+        <h2 class="testSticky">titulos:</h2>
+        </br>
+        <button style="margin-top: 200vh;" id="buttonFetchData">fetch dados</button>
+
+        <script type="module">
+            import { posts } from "./js/main.js";
+            document.getElementById("buttonFetchData").onclick = async function fetchData()
+            {
+                const data = await posts();
+                console.log(data);
+
+                const p = document.createElement('div');
+
+                data.forEach(x => {
+                    var txt = document.createTextNode(""+x.title+"\u000a");
+                    p.appendChild(txt);
+                });
+                p.style = "white-space: pre;";
+                var body = document.getElementById('body');
+                body.appendChild(p);
+
+                document.getElementById("buttonFetchData").style = "visibility: hidden;";
+            }
+        </script>
+    </body>
+</html>
