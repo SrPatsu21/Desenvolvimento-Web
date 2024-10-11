@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main
+{
+    width: 80vw;
+    height: 80vh;
+    margin: 4rem auto;
+    display: grid;
+    grid: auto-flow/ repeat(4, 1fr);
+    gap: 10px;
+}
+.display{
+    background-color: black;
+}
+main :nth-child(1)
+{
+    grid-column: 1/5;
+}
+main :nth-child(2)
+{
+    grid-column: 1 / 4;
+}
+main :nth-child(16)
+{
+    grid-column: 1 / 3;
+}
